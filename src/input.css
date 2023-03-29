@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar{
+    @apply mx-auto flex max-w-4xl items-center justify-between p-4;
+}
+
 .section-header {
     @apply mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl;
+}
+
+.saperation-line{
+    @apply mx-auto w-1/2 bg-black dark:bg-white;
 }
