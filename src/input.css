@@ -13,3 +13,7 @@
 .saperation-line{
     @apply mx-auto w-1/2 bg-black dark:bg-white;
 }
+
+.card {
+    @apply flex flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white px-2 py-6 w-2/3 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6;
+}
