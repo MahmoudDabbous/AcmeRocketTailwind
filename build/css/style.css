@@ -513,6 +513,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -567,12 +571,12 @@ video {
   min-height: 100vh;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .max-w-4xl {
@@ -581,6 +585,28 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.origin-top {
+  transform-origin: top;
+}
+
+@keyframes open-menu {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-open-menu {
+  animation: open-menu 0.5s ease-in-out forwards;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .scroll-m-16 {
@@ -637,6 +663,10 @@ video {
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -668,6 +698,11 @@ video {
   background-color: rgb(15 118 110 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-teal-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(13 148 136 / var(--tw-bg-opacity));
@@ -683,6 +718,21 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-12 {
@@ -714,6 +764,16 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .text-4xl {
@@ -916,11 +976,6 @@ video {
   opacity: 0.9;
 }
 
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 .active\:bg-teal-500:active {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
@@ -1016,8 +1071,16 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 }
 
@@ -1027,7 +1090,7 @@ video {
   }
 }
 
-@media (min-aspect-ratio: 1/2) {
+@media (min-aspect-ratio: 3/4) {
   .tallscreen\:section-min-height{
     min-height: calc(100vh - 68px);
   }
